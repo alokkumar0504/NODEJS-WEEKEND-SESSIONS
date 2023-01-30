@@ -1,0 +1,105 @@
+1.INSTALL VS CODE(https://code.visualstudio.com/ )
+2.INSTALL NODE-https://nodejs.org/en/ 
+3.CREATE GITHUB ACCOUNT-https://github.com/ 
+4.INSTALL GIT BASH-
+5.https://github.com/alokkumar0504/NODEJS-WEEKEND-SESSIONS(follow)
+6.add json viewer extentation to the chrome-https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh
+7.Install Postman
+8.VS Code Extentation
+	>TabNine
+	>Eslint
+	>spell Check
+	>git history
+	>git lens
+	>vscode-icons
+*imp:wt is NODEJS?
+==>Nodejs is a single Thread, Async, Non-blocking I/O.
+==>Run On Engine That is v8.(Chrome Engine).
+==>Made on two language c++ and libu.
+==>Each Section(Process) there is a each event to Complete it.
+==>Directly Convert into Machine Code.(Without converting to bytecode)
+==>Most Prefared Language For Multiple Rquest Because Node js is a very fast
+==>Each Event is accessed with a Callback()[request and response on the same callback]
+==>V8 is a Compiler to Compile the node js.
+
+
+*faq:wt is JSON:
+==>JSON stands for JavaScript Object Notation.
+==>"Structure to Represent the data".
+==>it is the way to represent the data in structured way that any one easily understand.
+Sync:->
+	{
+	     "name":"Alok",
+              "class":"Node js"
+	}
+==> Key value Pair of data.
+==JSON FORMAT OF DATA IN TERMS OF ARRAY======
+[
+	{
+	     "name":"Alok",
+              "class":"Node js"
+	},
+	{
+	     "name":"Alok",
+              "class":"Node js"
+	}
+]
+
+
+*IMP:Wt is NPM?.
+
+==>NPM is Stands For Node Package Manager.
+==>Like Every Language Packages.
+==>Around 1.4lakhs packages.
+
+
+
+//////////////////////////////////////////////////////////////////////
+
+
+
+*faq:Wt is package.json
+==>Entry point of to application
+==>Conatins Command Like->start,test
+==>conatins all package we use
+==>meta data(description, version, name)
+
+************Step to generate Package.json*******************
+1.NodeJs must be instll in system
+2.go inside the folder using cmd/terminal
+3.npm init
+*************step to install packages*******************
+1.npm i package-name(For a single package)
+2.npm i(For all packags)
+
+Node js Basic packages:
+-----------------------
+	i.Os Packages.
+	ii.File packages.
+	iii.Http packages.
+
+*imp-i.os package:
+--------------------------------------
+-To know the which os i used.
+1.let os=require('os');---------------------os is a variable---2nd os is required package(inbuilt node packg)
+console.log(os.platform());
+o/p-win32/...
+
+-TO know the how many cpus are working in the machine
+2.console.log(os.cpus());
+o/p-..
+
+-To know the architecture of the computer.
+3.console.log(os.arch());
+
+o/p-x64
+
+-To know the length of the cpus
+
+4.console.log(os.cpus().length);
+o/p-4
+
+-To know more go for os.(So many options are there)
+
+
+///next session is all about the inbuilt node pack.
