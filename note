@@ -103,3 +103,153 @@ o/p-4
 
 
 ///next session is all about the inbuilt node pack.
+
+*imp-ii.File package:
+--------------
+-inbuilt the file package
+1.let fs=require('fs');
+*imp-require is a Synatx to grab the data and packages.
+
+Write File:
+--------------------------------------------------------------------------------------------------
+sync:
+2.fs.writeFile(file,data,nodeparam Callback());
+--taking 3 paramter in writeFile function.
+Ex:
+fs.writeFile('mytext.txt','This is the content of the text file',function(){
+     console.log("FILE Is CREATED");
+ })
+
+i.callback()-to call the function inside a another function.
+	    -When the task of the outsider function is complete the function will give the information.
+	    -Call back function is always no parameter.so it called noparamCallback() function.(*****For write File only)
+ii.function(){}-is called as an anonymous function where the function is not having any name.
+
+
+
+Disadantage in fs.Writefile:
+*it remove the old exsisting line and paste the new content.
+
+3.fs.appendFile('file','data',nodeparam Callback());
+
+Ex:
+fs.appendFile('mycode.txt','This is the content of the text file \n',function(){
+    console.log("FILE IS APPENDED");
+})
+
+Advantage in fs.appendFile:
+*it dont remove the old exsisting line and paste the new content in the same file.
+
+
+4.ReadFile:
+-------------------------------------------------------------------------------------------
+Sync:
+fs.readFile(path,callback(err,data){})
+
+Ex:
+fs.readFile('mycode2.txt',(err,data)=>{
+    if(err){
+        throw err;
+    }
+    else{
+        console.log(data)
+    }    
+})
+o/p:
+<Buffer 79 6f 75 20 61 72 65 20 75 73 69 6e 67 20 77 69 6e 33 32 6f 73 20 6f 66 20 78 36 
+34 20 62 69 74 20 77 69 74 68 34 63 6f 72 65 20 53 79 73 74 65 6d 2e ... 55 more bytes>
+--buffer data will read from the file so we have to use utf-8(Standard encryption).
+
+Ex:
+fs.readFile('mycode2.txt','utf-8',(err,data)=>{
+    if(err){
+        throw err;
+    }
+    else{
+        console.log(data)
+    }    
+})
+
+o/p:you are using win32os of x64 bit with4core System.   
+you are using win32 os of x64  bit with 4core  System
+
+**reading for json data:
+fs.readFile('db.json','utf-8',(err,data)=>{
+    if(err){
+        throw err;
+    }
+    else{
+        console.log(data)
+    }    
+})
+o/p:[{
+    "id":1,
+    "name":"alok",
+    "rollno":"202060067",
+    "regno":2005202024,
+    "branch":"mca"
+
+},
+{   "id":1,
+    "name":"alok",
+    "rollno":"202060067",
+    "regno":2005202024,
+    "branch":"mca"
+
+}
+]
+
+
+Delete File:
+-------------------------------------------------------------------------------------------------------
+Sync:
+fs.unlink(path,callback(err){})
+
+Ex:
+fs.unlink('mytext.txt',(err)=>{
+        if(err) throw err;
+        console .log('filedeleted')
+})
+o/p:File deleted.
+
+Renamed Filename:
+----------------------------------------------------------------------------------------------------------
+Syn:
+fs.rename(path,callback(err){})
+
+Ex:
+fs.rename('mycode.txt','mycoderename.txt',(err)=>{
+    if(err) throw err;
+    console .log("File name renamed")
+})
+o/p:File name renamed.
+
+============================================================================================================
+*imp-iii.http package:
+------------------------
+Syn:to implement http package.
+
+let http=require('http');
+
+1.create server.
+
+sync:
+var server= http.createServer(function(req,res){})
+
+*faq:wt is req:
+request is what we send to the server params,query params,body.
+
+*faq:wt is res:
+response is what we receive from server.(server will give us return).
+
+
+Ex:
+
+let http=require('http')
+
+const server=http.createServer((req,res)=>{
+    res.write('<h1>Create Server With Node</h1>')
+    res.end();
+})
+
+server.listen(8080)--port no to run the http server.
