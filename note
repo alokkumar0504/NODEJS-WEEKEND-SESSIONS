@@ -274,3 +274,16 @@ const server=http.createServer((req,res)=>{
     })
 })
 server.listen(port);
+
+
+////////////////////////////////////////////////////////////////
+Local dependencies- inside that folder
+Global dependencies-inside the machine
+
+windows:
+	    npm i -g  package-name
+*imp--  Nodemon Package:To start the srevre automatically.
+npm i -g nodemon
+
+*To install dev dependency
+npm i packagename --save-dev
