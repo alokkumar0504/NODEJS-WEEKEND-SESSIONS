@@ -1,7 +1,7 @@
 let http=require('http')
 let fs=require('fs')
 
-let port=9090
+let port=7800
 //combination of http and fs packages.
 const server=http.createServer((req,res)=>{
     fs.readFile('db.json','utf-8',(err,data)=>{
@@ -14,3 +14,15 @@ const server=http.createServer((req,res)=>{
         }
     })
 })
+server.listen(port);
+
+
+
+
+const sum=function add(a,b){
+    return a+b;
+}
+
+sum(3,4);
+
+

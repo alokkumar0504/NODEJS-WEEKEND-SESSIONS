@@ -1,0 +1,19 @@
+{
+  "name": "nodepackg",
+  "version": "1.0.0",
+  "description": "this is about the nodemon package",
+  "main": "fs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node http.js",
+    "dev": "nodemon http.js"
+  },
+  "author": "alokkumar",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

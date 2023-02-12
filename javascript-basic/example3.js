@@ -23,6 +23,9 @@
 // const a="hello";
 // console.log(a);
 
-console.log(a);
+
+console.log(a);//undef
 var a=10;
-console.log(a);
+console.log(a);//10
+
+//let and const 
